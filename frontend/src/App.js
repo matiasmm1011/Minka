@@ -115,7 +115,7 @@ function App() {
                   <path d="M 65 45 Q 65 55, 65 65 Q 65 75, 55 75" fill="#26C6DA"/>
                 </svg>
               </div>
-              <h1>Conectamos Talento con Oportunidades</h1>
+              <h1>Conectamos Necesidades con Oportunidades</h1>
               <p className="subtitle">
                 La plataforma boliviana que une a quienes buscan servicios con quienes los ofrecen
               </p>
