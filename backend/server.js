@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Conectar a MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/minka', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -24,15 +24,21 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Modelo de Usuario (ya lo tienes en Usuario.js)
+// Importar modelo
 const Usuario = require('./models/Usuario');
 
-// Ruta de prueba
+// Ruta de prueba - VERIFICAR QUE ESTÁ VIVO
 app.get('/', (req, res) => {
-  res.json({ message: '✅ Backend Minka funcionando!' });
+  res.json({ 
+    message: '✅ Backend Minka funcionando!',
+    endpoints: {
+      registro: 'POST /api/usuarios/registro',
+      usuarios: 'GET /api/usuarios'
+    }
+  });
 });
 
-// Ruta de registro - COMPATIBLE con tu frontend
+// ✅ ESTE ES EL ENDPOINT QUE FALTA - Ruta de registro
 app.post('/api/usuarios/registro', async (req, res) => {
   console.log('📨 Recibiendo registro:', req.body);
   
@@ -94,7 +100,7 @@ app.post('/api/usuarios/registro', async (req, res) => {
   }
 });
 
-// Ruta para obtener todos los usuarios (solo para testing)
+// Ruta para obtener usuarios
 app.get('/api/usuarios', async (req, res) => {
   try {
     const usuarios = await Usuario.find().sort({ fechaRegistro: -1 });
@@ -106,5 +112,8 @@ app.get('/api/usuarios', async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en puerto ${PORT}`);
-  console.log(`📧 MongoDB: ${process.env.MONGODB_URI ? 'Conectado' : 'No configurado'}`);
+  console.log(`📍 Endpoints disponibles:`);
+  console.log(`   GET  / → Health check`);
+  console.log(`   POST /api/usuarios/registro → Registrar usuario`);
+  console.log(`   GET  /api/usuarios → Listar usuarios`);
 });
