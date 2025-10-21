@@ -24,7 +24,7 @@ function App() {
     e.preventDefault();
     
     try {
-      const API_URL = process.env.REACT_APP_API_URL;
+      const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
       console.log('🔗 Enviando a:', API_URL);
       
       const response = await fetch(`${API_URL}/api/usuarios/registro`, {
@@ -120,7 +120,7 @@ function App() {
                   <path d="M 65 45 Q 65 55, 65 65 Q 65 75, 55 75" fill="#26C6DA"/>
                 </svg>
               </div>
-              <h1>Conectamos Necesidades con Oportunidades</h1>
+              <h1>Conectamos Talento con Oportunidades</h1>
               <p className="subtitle">
                 La plataforma boliviana que une a quienes buscan servicios con quienes los ofrecen
               </p>
@@ -234,6 +234,113 @@ function App() {
                   <h3>Salud</h3>
                   <p>Enfermería, fisioterapia, cuidado</p>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* NUEVA SECCIÓN: Así se ve Minka */}
+          <section className="platform-preview">
+            <div className="container">
+              <h2 className="section-title">Así se ve Minka en acción</h2>
+              <p className="section-subtitle">
+                Interfaz simple e intuitiva. Encuentra servicios en segundos o publica el tuyo en minutos.
+              </p>
+
+              {/* Mockup de la plataforma web */}
+              <div className="web-mockup">
+                <div className="mockup-header">
+                  <div className="mockup-tabs">
+                    <button className="mockup-tab active">Encuentra Servicios</button>
+                    <button className="mockup-tab">Encuentra trabajos</button>
+                    <button className="mockup-tab">Tu perfil</button>
+                  </div>
+                  <div className="mockup-search">
+                    <span className="search-icon">🔍</span>
+                    <input type="text" placeholder="Busca un servicio..." readOnly />
+                  </div>
+                </div>
+
+                <div className="mockup-filters">
+                  <button className="filter-btn active">Clases</button>
+                  <button className="filter-btn">Maquillista</button>
+                  <button className="filter-btn">Trabajo doméstico</button>
+                </div>
+
+                <div className="mockup-services-grid">
+                  {/* Servicio 1 */}
+                  <div className="mockup-service-card">
+                    <div className="mockup-service-image" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
+                      <div className="service-category-badge">Educación</div>
+                      <div className="mockup-service-icon">📚</div>
+                    </div>
+                    <div className="mockup-service-content">
+                      <h4>Clases de matemática para colegio</h4>
+                      <div className="mockup-service-rating">
+                        ⭐⭐⭐⭐⭐ <span>(4.8)</span>
+                      </div>
+                      <div className="mockup-service-price">Bs 60 <span>la hora</span></div>
+                      <div className="mockup-service-location">📍 Zona Sur, La Paz</div>
+                    </div>
+                  </div>
+
+                  {/* Servicio 2 */}
+                  <div className="mockup-service-card">
+                    <div className="mockup-service-image" style={{background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'}}>
+                      <div className="service-category-badge">Belleza</div>
+                      <div className="mockup-service-icon">💄</div>
+                    </div>
+                    <div className="mockup-service-content">
+                      <h4>Maquillista profesional</h4>
+                      <div className="mockup-service-rating">
+                        ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+                      </div>
+                      <div className="mockup-service-price">Bs 100 <span>por evento</span></div>
+                      <div className="mockup-service-location">📍 Centro, Cochabamba</div>
+                    </div>
+                  </div>
+
+                  {/* Servicio 3 */}
+                  <div className="mockup-service-card">
+                    <div className="mockup-service-image" style={{background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'}}>
+                      <div className="service-category-badge">Hogar</div>
+                      <div className="mockup-service-icon">🧹</div>
+                    </div>
+                    <div className="mockup-service-content">
+                      <h4>Limpieza de alfombras</h4>
+                      <div className="mockup-service-rating">
+                        ⭐⭐⭐⭐ <span>(4.5)</span>
+                      </div>
+                      <div className="mockup-service-price">Bs 70 <span>por alfombra</span></div>
+                      <div className="mockup-service-location">📍 Zona Norte, Santa Cruz</div>
+                    </div>
+                  </div>
+
+                  {/* Servicio 4 */}
+                  <div className="mockup-service-card">
+                    <div className="mockup-service-image" style={{background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'}}>
+                      <div className="service-category-badge">Técnicos</div>
+                      <div className="mockup-service-icon">🔧</div>
+                    </div>
+                    <div className="mockup-service-content">
+                      <h4>Arreglar tuberías rotas</h4>
+                      <div className="mockup-service-rating">
+                        ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+                      </div>
+                      <div className="mockup-service-price">Bs 50 <span>desde</span></div>
+                      <div className="mockup-service-location">📍 Sopocachi, La Paz</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mensaje del 5% */}
+              <div className="commission-message">
+                <div className="commission-icon">💰</div>
+                <h3>Solo cobramos 5% por servicio completado.</h3>
+                <p>El <strong>95% restante es tuyo.</strong></p>
+                <p className="commission-subtext">
+                  Nuestro éxito depende del tuyo. Por eso mantenemos nuestra comisión baja y transparente.
+                </p>
               </div>
             </div>
           </section>
@@ -395,6 +502,7 @@ function App() {
       {/* VISTA: QUIÉNES SOMOS */}
       {activeTab === 'quienes-somos' && (
         <div className="tab-content">
+          {/* ... (mantén todo el código de Quiénes Somos igual) ... */}
           <section className="about-hero">
             <div className="container">
               <h1>Quiénes Somos</h1>
@@ -460,7 +568,6 @@ function App() {
                 </div>
               </div>
 
-              {/* Sección de Contacto */}
               <div className="contact-section">
                 <h2>📞 Información de Contacto</h2>
                 <div className="contact-grid">
@@ -486,7 +593,6 @@ function App() {
                 </div>
               </div>
 
-              {/* Redes Sociales */}
               <div className="social-section">
                 <h2>🌐 Síguenos en Redes Sociales</h2>
                 <p>Mantente al día con nuestras últimas novedades y actualizaciones</p>
@@ -513,6 +619,7 @@ function App() {
       {/* VISTA: REGISTRO */}
       {activeTab === 'registro' && (
         <div className="tab-content">
+          {/* ... (mantén todo el código de Registro igual) ... */}
           <section className="registro-hero">
             <div className="container">
               <h1>Únete a Minka</h1>
