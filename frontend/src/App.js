@@ -24,8 +24,9 @@ function App() {
     e.preventDefault();
     
     try {
-      const API_URL = process.env.REACT_APP_API_URL;
-      const response = await fetch("https://minka-production.up.railway.app/api/register", {
+    const API_URL = process.env.REACT_APP_API_URL;
+    console.log('🔗 Enviando a:', API_URL); // ← Agrega esta línea para debug
+    const response = await fetch(`${API_URL}/api/usuarios/registro`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
