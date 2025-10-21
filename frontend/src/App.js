@@ -238,112 +238,136 @@ function App() {
             </div>
           </section>
 
-          {/* NUEVA SECCIÓN: Así se ve Minka */}
-          <section className="platform-preview">
-            <div className="container">
-              <h2 className="section-title">Así se ve Minka en acción</h2>
-              <p className="section-subtitle">
-                Interfaz simple e intuitiva. Encuentra servicios en segundos o publica el tuyo en minutos.
-              </p>
+        {/* NUEVA SECCIÓN: Así se ve Minka */}
+<section className="platform-preview">
+  <div className="container">
+    <h2 className="section-title">Así se ve Minka en acción</h2>
+    <p className="section-subtitle">
+      Interfaz simple e intuitiva. Encuentra servicios en segundos o publica el tuyo en minutos.
+    </p>
 
-              {/* Mockup de la plataforma web */}
-              <div className="web-mockup">
-                <div className="mockup-header">
-                  <div className="mockup-tabs">
-                    <button className="mockup-tab active">Encuentra Servicios</button>
-                    <button className="mockup-tab">Encuentra trabajos</button>
-                    <button className="mockup-tab">Tu perfil</button>
-                  </div>
-                  <div className="mockup-search">
-                    <span className="search-icon">🔍</span>
-                    <input type="text" placeholder="Busca un servicio..." readOnly />
-                  </div>
-                </div>
+    {/* Mockup de la plataforma web */}
+    <div className="web-mockup">
+      <div className="mockup-header">
+        <div className="mockup-tabs">
+          <button className="mockup-tab active">Encuentra Servicios</button>
+          <button className="mockup-tab">Encuentra trabajos</button>
+          <button className="mockup-tab">Tu perfil</button>
+        </div>
+        <div className="mockup-search">
+          <span className="search-icon">🔍</span>
+          <input type="text" placeholder="Busca un servicio..." readOnly />
+        </div>
+      </div>
 
-                <div className="mockup-filters">
-                  <button className="filter-btn active">Clases</button>
-                  <button className="filter-btn">Maquillista</button>
-                  <button className="filter-btn">Trabajo doméstico</button>
-                </div>
+      <div className="mockup-filters">
+        <button className="filter-btn active">Clases</button>
+        <button className="filter-btn">Maquillista</button>
+        <button className="filter-btn">Trabajo doméstico</button>
+      </div>
 
-                <div className="mockup-services-grid">
-                  {/* Servicio 1 */}
-                  <div className="mockup-service-card">
-                    <div className="mockup-service-image" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
-                      <div className="service-category-badge">Educación</div>
-                      <div className="mockup-service-icon">📚</div>
-                    </div>
-                    <div className="mockup-service-content">
-                      <h4>Clases de matemática para colegio</h4>
-                      <div className="mockup-service-rating">
-                        ⭐⭐⭐⭐⭐ <span>(4.8)</span>
-                      </div>
-                      <div className="mockup-service-price">Bs 60 <span>la hora</span></div>
-                      <div className="mockup-service-location">📍 Zona Sur, La Paz</div>
-                    </div>
-                  </div>
-
-                  {/* Servicio 2 */}
-                  <div className="mockup-service-card">
-                    <div className="mockup-service-image" style={{background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'}}>
-                      <div className="service-category-badge">Belleza</div>
-                      <div className="mockup-service-icon">💄</div>
-                    </div>
-                    <div className="mockup-service-content">
-                      <h4>Maquillista profesional</h4>
-                      <div className="mockup-service-rating">
-                        ⭐⭐⭐⭐⭐ <span>(5.0)</span>
-                      </div>
-                      <div className="mockup-service-price">Bs 100 <span>por evento</span></div>
-                      <div className="mockup-service-location">📍 Centro, Cochabamba</div>
-                    </div>
-                  </div>
-
-                  {/* Servicio 3 */}
-                  <div className="mockup-service-card">
-                    <div className="mockup-service-image" style={{background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'}}>
-                      <div className="service-category-badge">Hogar</div>
-                      <div className="mockup-service-icon">🧹</div>
-                    </div>
-                    <div className="mockup-service-content">
-                      <h4>Limpieza de alfombras</h4>
-                      <div className="mockup-service-rating">
-                        ⭐⭐⭐⭐ <span>(4.5)</span>
-                      </div>
-                      <div className="mockup-service-price">Bs 70 <span>por alfombra</span></div>
-                      <div className="mockup-service-location">📍 Zona Norte, Santa Cruz</div>
-                    </div>
-                  </div>
-
-                  {/* Servicio 4 */}
-                  <div className="mockup-service-card">
-                    <div className="mockup-service-image" style={{background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'}}>
-                      <div className="service-category-badge">Técnicos</div>
-                      <div className="mockup-service-icon">🔧</div>
-                    </div>
-                    <div className="mockup-service-content">
-                      <h4>Arreglar tuberías rotas</h4>
-                      <div className="mockup-service-rating">
-                        ⭐⭐⭐⭐⭐ <span>(4.9)</span>
-                      </div>
-                      <div className="mockup-service-price">Bs 50 <span>desde</span></div>
-                      <div className="mockup-service-location">📍 Sopocachi, La Paz</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Mensaje del 5% */}
-              <div className="commission-message">
-                <div className="commission-icon">💰</div>
-                <h3>Solo cobramos 5% por servicio completado.</h3>
-                <p>El <strong>95% restante es tuyo.</strong></p>
-                <p className="commission-subtext">
-                  Nuestro éxito depende del tuyo. Por eso mantenemos nuestra comisión baja y transparente.
-                </p>
-              </div>
+      <div className="mockup-services-grid">
+        {/* Servicio 1 - Clases */}
+        <div className="mockup-service-card">
+          <div
+            className="mockup-service-image"
+            style={{ backgroundImage: "url(/clases.png)" }}
+          >
+            <div className="service-category-badge">Educación</div>
+          </div>
+          <div className="mockup-service-content">
+            <h4>Clases de matemática para colegio</h4>
+            <div className="mockup-service-rating">
+              ⭐⭐⭐⭐⭐ <span>(4.8)</span>
             </div>
-          </section>
+            <div className="mockup-service-price">
+              Bs 60 <span>la hora</span>
+            </div>
+            <div className="mockup-service-location">📍 Zona Sur, La Paz</div>
+          </div>
+        </div>
+
+        {/* Servicio 2 - Maquillista */}
+        <div className="mockup-service-card">
+          <div
+            className="mockup-service-image"
+            style={{ backgroundImage: "url(/maquillista.png)" }}
+          >
+            <div className="service-category-badge">Belleza</div>
+          </div>
+          <div className="mockup-service-content">
+            <h4>Maquillista profesional</h4>
+            <div className="mockup-service-rating">
+              ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+            </div>
+            <div className="mockup-service-price">
+              Bs 100 <span>por evento</span>
+            </div>
+            <div className="mockup-service-location">
+              📍 Centro, Cochabamba
+            </div>
+          </div>
+        </div>
+
+        {/* Servicio 3 - Limpieza de alfombras */}
+        <div className="mockup-service-card">
+          <div
+            className="mockup-service-image"
+            style={{ backgroundImage: "url(/limpieza_alfombras.png)" }}
+          >
+            <div className="service-category-badge">Hogar</div>
+          </div>
+          <div className="mockup-service-content">
+            <h4>Limpieza de alfombras</h4>
+            <div className="mockup-service-rating">
+              ⭐⭐⭐⭐ <span>(4.5)</span>
+            </div>
+            <div className="mockup-service-price">
+              Bs 70 <span>por alfombra</span>
+            </div>
+            <div className="mockup-service-location">
+              📍 Zona Norte, Santa Cruz
+            </div>
+          </div>
+        </div>
+
+        {/* Servicio 4 - Reparación de tuberías */}
+        <div className="mockup-service-card">
+          <div
+            className="mockup-service-image"
+            style={{ backgroundImage: "url(/reparacion_tuberias.png)" }}
+          >
+            <div className="service-category-badge">Técnicos</div>
+          </div>
+          <div className="mockup-service-content">
+            <h4>Arreglar tuberías rotas</h4>
+            <div className="mockup-service-rating">
+              ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+            </div>
+            <div className="mockup-service-price">
+              Bs 50 <span>desde</span>
+            </div>
+            <div className="mockup-service-location">
+              📍 Sopocachi, La Paz
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Mensaje del 5% */}
+    <div className="commission-message">
+      <div className="commission-icon">💰</div>
+      <h3>Solo cobramos 5% por servicio completado.</h3>
+      <p>El <strong>95% restante es tuyo.</strong></p>
+      <p className="commission-subtext">
+        Nuestro éxito depende del tuyo. Por eso mantenemos nuestra comisión baja
+        y transparente.
+      </p>
+    </div>
+  </div>
+</section>
+
 
           {/* Sección de Precios */}
           <section className="pricing-section">
