@@ -25,7 +25,7 @@ function App() {
     
     try {
       const API_URL = process.env.REACT_APP_API_URL;
-      const response = await fetch(`${API_URL}/api/register`, {
+      const response = await fetch("https://minka-production.up.railway.app/api/register", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
