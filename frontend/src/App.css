@@ -23,6 +23,11 @@ body {
   margin: 0 auto;
   padding: 0 2rem;
 }
+.mockup-header,
+.mockup-filters {
+  display: none;
+}
+
 
 /* ===== NAVBAR ===== */
 .navbar {
