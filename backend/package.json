@@ -1,5 +1,5 @@
 {
-  "name": "minka-backend",
+  "name": "backend",
   "version": "1.0.0",
   "description": "Backend para Minka - Plataforma de servicios",
   "main": "server.js",
