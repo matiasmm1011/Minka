@@ -345,7 +345,7 @@ function App() {
               ⭐⭐⭐⭐⭐ <span>(4.9)</span>
             </div>
             <div className="mockup-service-price">
-              Bs 50 <span>
+              Bs 50 <span></span>
             </div>
             <div className="mockup-service-location">
               📍 Sopocachi, La Paz
