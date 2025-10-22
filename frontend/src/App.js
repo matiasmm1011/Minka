@@ -323,7 +323,7 @@ function App() {
               ⭐⭐⭐⭐ <span>(4.5)</span>
             </div>
             <div className="mockup-service-price">
-              Bs 70 <span>por alfombra</span>
+              Bs 70 <span>por metro cuadrado</span>
             </div>
             <div className="mockup-service-location">
               📍 Zona Norte, Santa Cruz
@@ -345,7 +345,7 @@ function App() {
               ⭐⭐⭐⭐⭐ <span>(4.9)</span>
             </div>
             <div className="mockup-service-price">
-              Bs 50 <span>desde</span>
+              Bs 50 <span>
             </div>
             <div className="mockup-service-location">
               📍 Sopocachi, La Paz
